@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -r n
+#PBS -m abe
+#PBS -M songlin3@msu.edu
+#PBS -N 4O-4D_XXX_7
+#PBS -o test.out
+#PBS -e test.err
+#PBS -l nodes=1:ppn=1:gpus=1
+#PBS -l mem=8G
+#PBS -l walltime=3:30:00
+
+echo $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+#-------------- Load Modules ------------------
+module load GNU/4.9
+module load CUDA/8.0
+module use /mnt/home/songlin3/16Complete_GNU-4.9_modulefiles
+module load Amber16
+
+exe=$AMBERHOME/bin/pmemdGT.cuda
+#-------------- Run job -----------------------
+$exe -O -i XXX_prod_7.in -p 4O-4D_merged.prmtop -c XXX_prod_6.rst -o XXX_prod_7.out -r XXX_prod_7.rst -inf XXX_prod_7.mdinfo -x XXX_prod_7.netcdf
+echo 'FINISH JOB, SAVE IT TO SCRATCH'

@@ -1,0 +1,16 @@
+remark goes here
+MASS
+
+BOND
+
+ANGLE
+
+DIHE
+
+IMPROPER
+c3-o -c -o          1.1          180.0         2.0          General improper torsional angle (1 general atom type)
+
+NONBON
+
+
+

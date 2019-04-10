@@ -1,0 +1,34 @@
+remark goes here
+MASS
+
+BOND
+n -cz  390.50   1.407       same as c2-n 
+
+ANGLE
+c3-n -cz   63.060     119.980   same as c2-n -c3
+n -cz-nh   74.200     109.140   same as n -c2-nh
+cz-n -c    65.090     122.150   same as c -n -c2
+
+DIHE
+c3-n -cz-nh   1    0.650       180.000           2.000      same as X -c2-n -X 
+n -cz-nh-hn   1    0.675       180.000           2.000      same as X -c2-nh-X 
+n -cz-nh-c3   1    0.675       180.000           2.000      same as X -c2-nh-X 
+nh-cz-n -c    1    0.650       180.000           2.000      same as X -c2-n -X 
+nh-cz-nh-c3   1    0.675       180.000           2.000      same as X -c2-nh-X 
+nh-cz-nh-hn   1    0.675       180.000           2.000      same as X -c2-nh-X 
+
+IMPROPER
+c -c3-n -cz         1.1          180.0         2.0          Using default value
+n -nh-cz-nh         1.1          180.0         2.0          Using default value
+cz-hn-nh-hn         1.1          180.0         2.0          Using default value
+c3-cz-nh-hn         1.1          180.0         2.0          Using default value
+ca-ca-ca-ha         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-h4-ca-nb         1.1          180.0         2.0          Using default value
+ca-cp-ca-ha         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-ca-cp-cp         1.1          180.0         2.0          Using default value
+c3-n -c -o         10.5          180.0         2.0          General improper torsional angle (2 general atom types)
+
+NONBON
+
+
+

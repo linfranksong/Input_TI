@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -r n
+#PBS -m abe
+#PBS -M songlin3@msu.edu
+#PBS -N 7H-3O_0.5
+#PBS -o test.out
+#PBS -e test.err
+#PBS -l nodes=1:ppn=4
+#PBS -l mem=16G
+#PBS -l walltime=20:00:00
+
+echo $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+#-------------- Load Modules ------------------
+module swap gnu intel
+module load openmpi
+module load amber
+
+exe=$AMBERHOME/bin/pmemd.MPI
+num=4
+#-------------- Run job -----------------------
+
+mpirun -np $num $exe -O -i 0.5_equi_0_3.in -p 7H-3O_merged.prmtop -c 0.5_equi_0_2.rst -o 0.5_equi_0_3.out -r 0.5_equi_0_3.rst -inf 0.5_equi_0_3.mdinfo -x 0.5_equi_0_3.netcdf -ref 0.5_equi_0_2.rst 
+echo 'FINISH JOB, SAVE IT TO SCRATCH'
