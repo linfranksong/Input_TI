@@ -1,0 +1,26 @@
+#!/bin/bash
+#PBS -r n
+#PBS -m abe
+#PBS -M songlin3@msu.edu
+#PBS -N 27-28_0.5
+#PBS -o test.out
+#PBS -e test.err
+#PBS -l nodes=1:ppn=4
+#PBS -l feature='intel16'
+#PBS -l mem=16G
+#PBS -l walltime=3:55:00
+
+echo $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+#-------------- Load Modules ------------------
+module swap gnu intel
+module load openmpi
+module load amber
+
+exe=$AMBERHOME/bin/pmemd.MPI
+num=4
+#-------------- Run job -----------------------
+
+mpirun -np $num $exe -O -i 0.5_equi_0.in -p 27-28_merged.prmtop -c 27-28_merged.inpcrd -o 0.5_equi_0.out -r 0.5_equi_0.rst -inf 0.5_equi_0.mdinfo -x 0.5_equi_0.netcdf 
+echo 'FINISH JOB, SAVE IT TO SCRATCH'
