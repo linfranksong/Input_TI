@@ -1,0 +1,13 @@
+remark goes here
+MASS
+
+BOND
+
+ANGLE
+CX-CT-OS    40.0      109.50   same as CT-CT-CX
+
+DIHE
+
+IMPROPER
+
+NONBON
