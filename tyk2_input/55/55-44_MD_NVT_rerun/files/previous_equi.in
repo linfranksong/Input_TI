@@ -1,0 +1,38 @@
+NVT MD w/No position restraints and PME (sander)
+ &cntrl
+  ntx    = 1,
+  irest  = 0,
+  ntpr   = 1000,
+  ntwx   = 10000,
+  ntwe   = 1000,
+  ntwr   = 1000,
+  ig     = -1,
+
+  ntf    = 1,
+  ntb    = 1,
+  cut    = 9.0,
+  iwrap  = 1,
+  nsnb   = 10,
+
+  nstlim = 1000000,
+  t      = 0.0,
+  nscm   = 1000,
+  dt     = 0.001,
+
+  temp0  = 300.0,
+  tempi  = 300.0,
+  ntt    = 3,
+  tautp  = 2.0,
+
+  ntc    = 1,
+  iwrap=1, ioutfm=1, ntwv=-1,ntave=1000,
+  icfe = 1, ifsc = 1,
+  timask1=':291',
+  timask2=':292',
+  scmask1=':291@C501,H511,H512,H513,O20,',
+  scmask2=':292@C20,C40,C30,C50,H301,H302,H303,H401,H402,H403,H501,H502,H503,',
+  clambda=XXX,
+&end
+ &ewald
+   skinnb=2, nfft1=96, nfft2=96, nfft3=96,
+ /
