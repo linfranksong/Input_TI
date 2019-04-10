@@ -1,0 +1,39 @@
+NPT MD w/No position restraints and PME (sander)
+ &cntrl
+  ntx    = 5,
+  irest  = 1,
+  ntpr   = 1000,
+  ntwx   = 1000,
+  ntwe   = 1000,
+  ntwr   = 1000,
+  ig     = -1,
+
+  ntf    = 1,
+  ntb    = 2,
+  ntp = 1, pres0 = 1.0, taup = 2.0,gamma_ln = 2.0,
+  cut    = 9.0,
+  iwrap  = 1,
+  nsnb   = 10,
+
+  nstlim = 200000,
+  t      = 0.0,
+  nscm   = 1000,
+  dt     = 0.001,
+
+  temp0  = 300.0,
+  tempi  = 300.0,
+  ntt    = 3,
+  tautp  = 2.0,
+
+  ntc    = 1,
+  iwrap=1, ioutfm=1, ntwv=-1,ntave=1000,
+  icfe = 1, ifsc = 1, nmropt=1, ntr=1, restraintmask=':1-2', restraint_wt=5.0,
+  timask1=':1',
+  timask2=':2',
+  scmask1=':1@C1,C2,C3,C4,O1,C20,H1,H2,H3,H4,H5,H6,H7,H8,H19,H20,',
+  scmask2=':2@O2,DC2,DC1,DC4,DC3,NJ1,CJ1,OJ1,CJ2,DH3,DH4,DH1,DH2,DH7,DH8,DH5,DH6,HJ1,HJ2,HJ3,',
+  clambda=0.5,
+&end
+ &ewald
+   skinnb=2, nfft1=96, nfft2=96, nfft3=96,
+ /
