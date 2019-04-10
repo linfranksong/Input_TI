@@ -1,0 +1,34 @@
+remark goes here
+MASS
+
+BOND
+
+ANGLE
+
+DIHE
+ca-ca-cc-ss   1    0.700       180.000           2.000      same as X -c2-ca-X 
+ca-ca-cc-cd   1    0.700       180.000           2.000      same as X -c2-ca-X 
+ca-cc-ss-cc   1    1.100       180.000           2.000      same as X -c2-ss-X 
+cc-ss-cc-c    1    1.100       180.000           2.000      same as X -c2-ss-X 
+cc-ss-cc-cd   1    1.100       180.000           2.000      same as X -c2-ss-X 
+cc-cd-os-c3   1    1.050       180.000           2.000      same as X -c2-os-X 
+c3-os-cd-cd   1    1.050       180.000           2.000      same as X -c2-os-X 
+
+IMPROPER
+n -o -c -os        10.5          180.0         2.0          General improper torsional angle (2 general atom types)
+c -c3-n -c3         1.1          180.0         2.0          General improper torsional angle (1 general atom type)
+c3-ca-nh-hn         1.1          180.0         2.0          Using default value
+ca-ca-ca-nh         1.1          180.0         2.0          Using default value
+ca-ca-ca-ha         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-ca-ca-cc         1.1          180.0         2.0          Using default value
+ca-cd-cc-ss         1.1          180.0         2.0          Using default value
+c -cd-cc-ss         1.1          180.0         2.0          Using default value
+cc-o -c -o          1.1          180.0         2.0          General improper torsional angle (1 general atom type)
+cc-cd-cd-os         1.1          180.0         2.0          Using default value
+c3-o -c -o          1.1          180.0         2.0          General improper torsional angle (1 general atom type)
+br-cc-cd-cd         1.1          180.0         2.0          Using default value
+
+NONBON
+
+
+
