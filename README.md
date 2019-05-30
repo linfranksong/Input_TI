@@ -9,7 +9,7 @@ Please read the following note carefully before using the files.
 
 Files I used for my calculation: 0.5_min_0.in, 0.5_heat_0.in, 0.5_equi_0.in, min.pbs, heat.pbs, equi.pbs. File generated: 0.5_equi_0.rst.
 
-Since 0.5_heat_0.in did not perform gradual heating, for future usage, please use following files for better heating and equilibration.
+Since 0.5_heat_0.in heats the system at ps timescale, for future usage, please use following files for better heating and equilibration.
 
 Files for future usage: 0.5_min_0.in, 0.5_heat_0_m.in, 0.5_equi_0_1.in, 0.5_equi_0_2.in, 0.5_equi_0_3.in, min.pbs, heat_m.pbs, equi_1.pbs, equi_2.pbs, equi_3.pbs. File will be generated: 0.5_equi_0_3.rst.
 
