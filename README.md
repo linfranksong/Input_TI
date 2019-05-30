@@ -3,7 +3,7 @@ Please read the following note carefully before using the files.
 
 1) Folder meaning:  e.g. CDK2_input/L29/29-26_MD_NVT_rerun, means CDK2 system, ligand name 29, mutating ligand 29 to ligand 26 in protein.
 
-2)Inside each mutation folder. 
+2) Inside each mutation folder. 
 
 2.1) Equilibration at lambda=0.5. 
 
